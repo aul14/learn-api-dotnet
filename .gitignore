@@ -1,0 +1,48 @@
+## Direktori dan file yang dihasilkan oleh Build ##
+bin/
+obj/
+*.user
+*.suo
+
+## Direktori publikasi dan deploy ##
+publish/
+wwwroot/
+
+## Konfigurasi sistem atau file yang bersifat lokal ##
+*.vs/
+.vscode/
+launchSettings.json
+
+## File log ##
+*.log
+
+## File sementara atau backup ##
+*.swp
+*.bak
+*.tmp
+
+## Paket NuGet ##
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## Cache dan file sementara lainnya ##
+.DS_Store
+Thumbs.db
+*.lock
+*.orig
+
+## Direktori distribusi ##
+dist/
+
+## File terkait testing ##
+TestResults/
+*.trx
+*.coverage
+
+## File IDE tambahan (Visual Studio, Rider, dll.) ##
+.idea/
+_ReSharper*/
+*.DotSettings.user
