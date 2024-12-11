@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using api.Data;
+using api.Interfaces;
 using api.Models;
+using api.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +20,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddScoped<IStockRepository, StockRepository>();
 
 var app = builder.Build();
 
