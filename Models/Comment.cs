@@ -10,8 +10,14 @@ namespace api.Models
         public int Id { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Content { get; set; } = string.Empty;
-        public DateTime CreatedOn { get; set; } = DateTime.Now;
-        public int? StockId { get; set; } 
+        // Pastikan CreatedOn disimpan dalam UTC
+        private DateTime _createdOn = DateTime.UtcNow; // Default ke UTC
+        public DateTime CreatedOn
+        {
+            get => _createdOn;
+            set => _createdOn = value.Kind == DateTimeKind.Utc ? value : value.ToUniversalTime();
+        }
+        public int? StockId { get; set; }
         //Navigation
         public Stock? Stock { get; set; }
     }
