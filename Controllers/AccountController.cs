@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace api.Controllers
 {
-    [Route("api/accound")]
+    [Route("api/account")]
     [ApiController]
     public class AccountController : ControllerBase
     {
